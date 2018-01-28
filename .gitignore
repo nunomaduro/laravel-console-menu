@@ -1,0 +1,9 @@
+
+.idea/*
+.idea/codeStyleSettings.xml
+.twgit_features_subject
+composer.lock
+/builds/
+/database/
+/vendor/
+coverage.xml
