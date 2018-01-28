@@ -4,7 +4,6 @@
 
 <p align="center">
   <a href="https://styleci.io/repos/119292066"><img src="https://styleci.io/repos/119292066/shield" alt="StyleCI Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-console-menu"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/laravel-console-menu.svg" alt="Quality Score"></img></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-console-menu"><img src="https://poser.pugx.org/nunomaduro/laravel-console-menu/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-console-menu"><img src="https://poser.pugx.org/nunomaduro/laravel-console-menu/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-console-menu"><img src="https://poser.pugx.org/nunomaduro/laravel-console-menu/license.svg" alt="License"></a>
