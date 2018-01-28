@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace NunoMaduro\LaravelConsoleMenu;
 
-use PhpSchool\CliMenu\CliMenu;
 use Illuminate\Console\Command;
 use Illuminate\Support\ServiceProvider;
 
