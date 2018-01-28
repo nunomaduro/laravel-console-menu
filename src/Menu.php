@@ -59,9 +59,9 @@ class Menu extends CliMenuBuilder
         $this->addMenuItem(
             new MenuOption(
                 $value, $label, function (CliMenu $menu) {
-                $this->optionSelected = $menu->getSelectedItem();
-                $menu->close();
-            }
+                    $this->optionSelected = $menu->getSelectedItem();
+                    $menu->close();
+                }
             )
         );
 
