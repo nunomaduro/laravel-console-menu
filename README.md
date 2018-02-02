@@ -11,7 +11,7 @@
 
 ## About Laravel Console Menu
 
-Laravel Console Menu was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is output method for Laravel Console Commands.
+Laravel Console Menu was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a [php-school/cli-menu](https://github.com/php-school/cli-menu) wrapper for Laravel Console Commands.
 
 ## Installation
 
