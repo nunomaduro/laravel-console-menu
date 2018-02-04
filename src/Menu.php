@@ -54,7 +54,7 @@ class Menu extends CliMenuBuilder
      *
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
-    public function addOption($value, string $label): Menu
+    public function addOption($value, string $label): self
     {
         $this->addMenuItem(
             new MenuOption(
@@ -75,7 +75,7 @@ class Menu extends CliMenuBuilder
      *
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
-    public function addOptions(array $options): Menu
+    public function addOptions(array $options): self
     {
         foreach ($options as $value => $label) {
             $this->addOption($value, $label);
