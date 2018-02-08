@@ -1,6 +1,6 @@
 {
     "name": "nunomaduro/laravel-console-menu",
-    "description": "Laravel Console Menu is a output method for your Laravel/Laravel Zero commands.",
+    "description": "Laravel Console Menu is an output method for your Laravel/Laravel Zero commands.",
     "keywords": ["console", "command-line", "php", "cli", "laravel-zero", "laravel", "artisan", "symfony"],
     "license": "MIT",
     "support": {
