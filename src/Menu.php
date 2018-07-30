@@ -24,7 +24,7 @@ class Menu extends CliMenuBuilder
     /**
      * The current option selected, if any.
      *
-     * @var \NunoMaduro\LaravelConsoleMenu\MenuOption
+     * @var \NunoMaduro\LaravelConsoleMenu\SelectedOption
      */
     private $optionSelected;
 
@@ -80,6 +80,32 @@ class Menu extends CliMenuBuilder
         foreach ($options as $value => $label) {
             $this->addOption($value, $label);
         }
+
+        return $this;
+    }
+
+    /**
+     * Adds a new text input option.
+     *
+     * @param string $label
+     * @param string $promptText
+     * @param string $placeholder
+     * @return Menu
+     */
+    public function addTextInputOption(string $label, string $promptText, string $placeholder = 'Enter text...' ): Menu
+    {
+        $itemCallable = function (CliMenu $menu) use ($promptText, $placeholder) {
+            $result = $menu->askText()
+                ->setPromptText($promptText)
+                ->setPlaceholderText($placeholder)
+                ->ask();
+
+            $this->optionSelected = new InputTextOption($result->fetch());
+
+            $menu->close();
+        };
+
+        $this->addItem($label, $itemCallable);
 
         return $this;
     }

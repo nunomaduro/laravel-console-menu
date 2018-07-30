@@ -13,12 +13,10 @@ declare(strict_types=1);
 
 namespace NunoMaduro\LaravelConsoleMenu;
 
-use PhpSchool\CliMenu\MenuItem\SelectableItem;
-
 /**
- * This is a Laravel Console Menu Option implementation.
+ * This is an Laravel Console Menu Option implementation.
  */
-class MenuOption extends SelectableItem implements SelectedOption
+class InputTextOption implements SelectedOption
 {
     /**
      * The option value.
@@ -31,15 +29,9 @@ class MenuOption extends SelectableItem implements SelectedOption
      * Creates a new menu option.
      *
      * @param int|string $value
-     * @param string $text
-     * @param callable $callback
-     * @param bool $showItemExtra
-     * @param bool $disabled
      */
-    public function __construct($value, $text, callable $callback, $showItemExtra = false, $disabled = false)
+    public function __construct($value)
     {
-        parent::__construct($text, $callback, $showItemExtra, $disabled);
-
         $this->value = $value;
     }
 

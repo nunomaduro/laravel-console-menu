@@ -47,6 +47,36 @@ class MenuCommand extends Command
 }
 ```
 
+### Setup with text values and user input
+
+<p align="center">
+    <img src="docs/example.png" width="100%">
+</p>
+
+```php
+class MenuCommand extends Command
+{
+    /**
+     * Execute the console command.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $option = $this->menu('Pizza menu')
+                    ->addOption('mozzarella', 'Mozzarella')
+                    ->addOption('chicken_parm', 'Chicken Parm')
+                    ->addOption('sausage', 'Sausage')
+                    ->addTextInputOption('Make your own','Describe your pizza')
+                    ->addOption('burger', 'Prefer burgers')
+                    ->setWidth(80)
+                    ->open();
+        
+        $this->info("You have chosen the text option: $option");
+    }
+}
+```
+
 ### Appearance
 
 Available colors: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
