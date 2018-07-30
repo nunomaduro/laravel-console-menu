@@ -58,7 +58,9 @@ class Menu extends CliMenuBuilder
     {
         $this->addMenuItem(
             new MenuOption(
-                $value, $label, function (CliMenu $menu) {
+                $value,
+                $label,
+                function (CliMenu $menu) {
                     $this->optionSelected = $menu->getSelectedItem();
                     $menu->close();
                 }
@@ -92,7 +94,7 @@ class Menu extends CliMenuBuilder
      * @param string $placeholder
      * @return Menu
      */
-    public function addTextInputOption(string $label, string $promptText, string $placeholder = 'Enter text...' ): Menu
+    public function addTextInputOption(string $label, string $promptText, string $placeholder = 'Enter text...'): Menu
     {
         $itemCallable = function (CliMenu $menu) use ($promptText, $placeholder) {
             $result = $menu->askText()

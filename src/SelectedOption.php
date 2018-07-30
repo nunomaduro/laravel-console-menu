@@ -20,5 +20,4 @@ interface SelectedOption
      * @return mixed
      */
     public function getValue();
-
 }
