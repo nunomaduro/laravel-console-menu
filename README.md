@@ -50,7 +50,7 @@ class MenuCommand extends Command
 ### Setup with text values and user input
 
 <p align="center">
-    <img src="docs/example.png" width="100%">
+    <img src="docs/example_text_values.png" width="100%">
 </p>
 
 ```php
