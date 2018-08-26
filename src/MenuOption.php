@@ -18,7 +18,7 @@ use PhpSchool\CliMenu\MenuItem\SelectableItem;
 /**
  * This is a Laravel Console Menu Option implementation.
  */
-class MenuOption extends SelectableItem implements SelectedOption
+class MenuOption extends SelectableItem
 {
     /**
      * The option value.

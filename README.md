@@ -47,10 +47,10 @@ class MenuCommand extends Command
 }
 ```
 
-### Setup with text values and user input
+### Setup with a question
 
 <p align="center">
-    <img src="docs/example_text_values.png" width="100%">
+    <img src="docs/example_with_question.png" width="100%">
 </p>
 
 ```php
@@ -67,7 +67,7 @@ class MenuCommand extends Command
                     ->addOption('mozzarella', 'Mozzarella')
                     ->addOption('chicken_parm', 'Chicken Parm')
                     ->addOption('sausage', 'Sausage')
-                    ->addTextInputOption('Make your own','Describe your pizza')
+                    ->addQuestion('Make your own', 'Describe your pizza...')
                     ->addOption('burger', 'Prefer burgers')
                     ->setWidth(80)
                     ->open();
@@ -76,6 +76,53 @@ class MenuCommand extends Command
     }
 }
 ```
+
+### Setup with advanced option, in this case, a password
+
+<p align="center">
+    <img src="docs/example_with_password.png" width="100%">
+</p>
+
+```php
+class MenuCommand extends Command
+{
+    /**
+     * Execute the console command.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $menu = $this->menu('Pizza menu')
+                    ->addOption('mozzarella', 'Mozzarella')
+                    ->addOption('chicken_parm', 'Chicken Parm')
+                    ->addOption('sausage', 'Sausage')
+                    ->addQuestion('Make your own', 'Describe your pizza...');
+        
+        $itemCallable = function (CliMenu $cliMenu) use ($menu) {
+            $cliMenu->askPassword()
+                ->setValidator(function ($password) {
+                    return $password === 'secret';
+                })
+                ->setPromptText('Secret password?')
+                ->ask();
+
+            $menu->setResult('Free spice!');
+
+            $cliMenu->close();
+        };
+        $menu->addItem('Add extra spice for free (password needed)', $itemCallable);
+
+
+        $option = $menu->addOption('burger', 'Prefer burgers')
+            ->setWidth(80)
+            ->open();
+
+        $this->info("You have chosen the text option: $option");
+    }
+}
+```
+
 
 ### Appearance
 
