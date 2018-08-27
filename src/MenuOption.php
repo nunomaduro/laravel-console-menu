@@ -16,7 +16,7 @@ namespace NunoMaduro\LaravelConsoleMenu;
 use PhpSchool\CliMenu\MenuItem\SelectableItem;
 
 /**
- * This is an Laravel Console Menu Option implementation.
+ * This is a Laravel Console Menu Option implementation.
  */
 class MenuOption extends SelectableItem
 {

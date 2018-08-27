@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace NunoMaduro\LaravelConsoleMenu;
 
 use PhpSchool\CliMenu\CliMenu;
-use PhpSchool\CliMenu\CliMenuBuilder;
+use PhpSchool\CliMenu\Builder\CliMenuBuilder;
 
 /**
  * This is an Laravel Console Menu implementation.
@@ -22,11 +22,11 @@ use PhpSchool\CliMenu\CliMenuBuilder;
 class Menu extends CliMenuBuilder
 {
     /**
-     * The current option selected, if any.
+     * The current option value.
      *
-     * @var \NunoMaduro\LaravelConsoleMenu\MenuOption
+     * @var mixed
      */
-    private $optionSelected;
+    private $result;
 
     /**
      * Menu constructor.
@@ -58,8 +58,10 @@ class Menu extends CliMenuBuilder
     {
         $this->addMenuItem(
             new MenuOption(
-                $value, $label, function (CliMenu $menu) {
-                    $this->optionSelected = $menu->getSelectedItem();
+                $value,
+                $label,
+                function (CliMenu $menu) {
+                    $this->result = $menu->getSelectedItem()->fetch();
                     $menu->close();
                 }
             )
@@ -85,7 +87,32 @@ class Menu extends CliMenuBuilder
     }
 
     /**
-     * Opens the menu and returns the selected option value.
+     * Add a question.
+     *
+     * @param string $label
+     * @param string $placeholder
+     * @return Menu
+     */
+    public function addQuestion(string $label, string $placeholder = ''): Menu
+    {
+        $itemCallable = function (CliMenu $menu) use ($label, $placeholder) {
+            $result = $menu->askText()
+                ->setPromptText($label)
+                ->setPlaceholderText($placeholder)
+                ->ask();
+
+            $this->result = $result->fetch();
+
+            $menu->close();
+        };
+
+        $this->addItem($label, $itemCallable);
+
+        return $this;
+    }
+
+    /**
+     * Open the menu and return the result.
      *
      * @return mixed
      */
@@ -94,6 +121,19 @@ class Menu extends CliMenuBuilder
         $this->build()
             ->open();
 
-        return $this->optionSelected ? $this->optionSelected->getValue() : null;
+        return $this->result;
+    }
+
+    /**
+     * Set the result.
+     *
+     * @param mixed $result
+     * @return Menu
+     */
+    public function setResult($result): Menu
+    {
+        $this->result = $result;
+
+        return $this;
     }
 }
