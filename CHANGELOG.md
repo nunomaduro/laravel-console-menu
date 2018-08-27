@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Upgraded Cli Menu to v3.
 
 ### Added
+- Support to Laravel 5.7.
 - `addQuestion` method to `Menu`.
 - `setResult` method to `Menu`, to allow using extra options.
    
