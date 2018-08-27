@@ -91,7 +91,8 @@ class Menu extends CliMenuBuilder
      *
      * @param string $label
      * @param string $placeholder
-     * @return Menu
+     *
+     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addQuestion(string $label, string $placeholder = ''): Menu
     {
@@ -128,7 +129,8 @@ class Menu extends CliMenuBuilder
      * Set the result.
      *
      * @param mixed $result
-     * @return Menu
+     *
+     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function setResult($result): Menu
     {
