@@ -61,7 +61,7 @@ class Menu extends CliMenuBuilder
                 $value,
                 $label,
                 function (CliMenu $menu) {
-                    $this->result = $menu->getSelectedItem()->fetch();
+                    $this->result = $menu->getSelectedItem()->getValue();
                     $menu->close();
                 }
             )
