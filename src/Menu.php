@@ -41,6 +41,8 @@ class Menu extends CliMenuBuilder
         $this->addLineBreak(' ')
             ->setTitleSeparator('-');
 
+        $this->setMarginAuto();
+
         $this->setTitle($title);
 
         $this->addOptions($options);
