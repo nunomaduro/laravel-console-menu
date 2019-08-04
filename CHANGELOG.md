@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.0] - 2019-08-04
+### Added
+- Support to Laravel 6
+
+## [2.1.0] - 2019-02-26
+### Added
+- Support to Laravel 5.8
+
 ## [2.0.1] - 2018-10-14
 ### Fixed
 - Margin when not defined ([49eab5a](https://github.com/nunomaduro/laravel-console-menu/commit/49eab5af81fb2bc9d53b120ff9c3926d93424fb3))
