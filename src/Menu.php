@@ -16,7 +16,6 @@ namespace NunoMaduro\LaravelConsoleMenu;
 use PhpSchool\CliMenu\Builder\CliMenuBuilder;
 use PhpSchool\CliMenu\CliMenu;
 
-
 /**
  * This is an Laravel Console Menu implementation.
  */
