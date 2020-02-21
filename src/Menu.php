@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace NunoMaduro\LaravelConsoleMenu;
 
-use PhpSchool\CliMenu\CliMenu;
 use PhpSchool\CliMenu\Builder\CliMenuBuilder;
+use PhpSchool\CliMenu\CliMenu;
 
 /**
  * This is an Laravel Console Menu implementation.
