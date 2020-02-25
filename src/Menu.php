@@ -54,11 +54,13 @@ class Menu extends CliMenuBuilder
      * @param mixed $value
      * @param string $label
      *
+     * @param CliMenuBuilder|null $subMenu
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
-    public function addOption($value, string $label): Menu
+    public function addOption($value, string $label, ?CliMenuBuilder $subMenu = null): Menu
     {
-        $this->addMenuItem(
+        $menu = $subMenu ?? $this;
+        $menu->addMenuItem(
             new MenuOption(
                 $value,
                 $label,
@@ -77,12 +79,21 @@ class Menu extends CliMenuBuilder
      *
      * @param array $options
      *
+     * @param CliMenuBuilder|null $subMenu
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
-    public function addOptions(array $options): Menu
+    public function addOptions(array $options, ?CliMenuBuilder $subMenu = null): Menu
     {
         foreach ($options as $value => $label) {
-            $this->addOption($value, $label);
+            if (is_array($label)) {
+                $menu = $this;
+                $this->addSubMenu($value, function (CliMenuBuilder $b) use ($value, $label, $menu) {
+                    $b->setTitle($value);
+                    $menu->addOptions($label, $b);
+                });
+            } else {
+                $this->addOption($value, $label, $subMenu);
+            }
         }
 
         return $this;
