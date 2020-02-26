@@ -136,8 +136,6 @@ Available colors: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, 
       ->setPadding(10)
       ->setMargin(5)
       ->setExitButtonText("Abort") // remove exit button with ->disableDefaultItems()
-      ->setUnselectedMarker('❅')
-      ->setSelectedMarker('✏')
       ->setTitleSeparator('*-')
       ->addLineBreak('<3', 2)
       ->addStaticItem('AREA 2')
