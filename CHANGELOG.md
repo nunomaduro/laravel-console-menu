@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0] - 2020-03-06
+### Changed
+- Update to use `php-school/cli-menu` version 4.x ([#24](https://github.com/nunomaduro/laravel-console-menu/pull/24))
+
 ## [2.3.0] - 2020-01-15
 ### Added
 - Support to Laravel 7
