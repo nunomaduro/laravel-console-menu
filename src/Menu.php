@@ -86,10 +86,11 @@ class Menu extends CliMenuBuilder
     {
         foreach ($options as $value => $label) {
             if (is_array($label)) {
+                $subMenuOptions = $label;
                 $menu = $this;
-                $this->addSubMenu($value, function (CliMenuBuilder $b) use ($value, $label, $menu) {
-                    $b->setTitle($value);
-                    $menu->addOptions($label, $b);
+                $this->addSubMenu($value, function (CliMenuBuilder $subMenu) use ($value, $subMenuOptions, $menu) {
+                    $subMenu->setTitle($value);
+                    $menu->addOptions($subMenuOptions, $subMenu);
                 });
             } else {
                 $this->addOption($value, $label, $subMenu);
