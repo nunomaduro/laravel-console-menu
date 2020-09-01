@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.1.0] - 2020-09-01
+### Added
+- Support for Laravel 8
+
+### Removed
+- Support for PHP <7.2.5
+- Support for Laravel 5
+
 ## [3.0.0] - 2020-03-06
 ### Changed
 - Update to use `php-school/cli-menu` version 4.x ([#24](https://github.com/nunomaduro/laravel-console-menu/pull/24))
