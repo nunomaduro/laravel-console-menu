@@ -30,11 +30,11 @@ class MenuOption extends SelectableItem
     /**
      * Creates a new menu option.
      *
-     * @param int|string $value
-     * @param string $text
-     * @param callable $callback
-     * @param bool $showItemExtra
-     * @param bool $disabled
+     * @param  int|string  $value
+     * @param  string  $text
+     * @param  callable  $callback
+     * @param  bool  $showItemExtra
+     * @param  bool  $disabled
      */
     public function __construct($value, $text, callable $callback, $showItemExtra = false, $disabled = false)
     {
