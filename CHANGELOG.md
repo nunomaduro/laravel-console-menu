@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.3.0] - 2022-01-13
+### Added
+- Add support for Laravel 9
+
 ## [3.2.0] - 2020-10-30
 ### Added
 - Add support for PHP 8 ([#28](https://github.com/nunomaduro/laravel-console-menu/pull/28))
