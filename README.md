@@ -14,7 +14,7 @@ Laravel Console Menu was created by, and is maintained by [Nuno Maduro](https://
 
 ## Installation
 
-> **Requires [PHP 7.1.3+](https://php.net/releases/)**
+> **Requires [PHP 7.2.5+](https://php.net/releases/)**
 
 Require Laravel Console Menu using [Composer](https://getcomposer.org):
 
@@ -136,8 +136,6 @@ Available colors: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, 
       ->setPadding(10)
       ->setMargin(5)
       ->setExitButtonText("Abort") // remove exit button with ->disableDefaultItems()
-      ->setUnselectedMarker('❅')
-      ->setSelectedMarker('✏')
       ->setTitleSeparator('*-')
       ->addLineBreak('<3', 2)
       ->addStaticItem('AREA 2')
