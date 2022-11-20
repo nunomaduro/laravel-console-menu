@@ -51,9 +51,9 @@ class Menu extends CliMenuBuilder
     /**
      * Adds a new option.
      *
-     * @param mixed $value
-     * @param string $label
-     * @param CliMenuBuilder|null $subMenu
+     * @param  mixed  $value
+     * @param  string  $label
+     * @param  CliMenuBuilder|null  $subMenu
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addOption($value, string $label, ?CliMenuBuilder $subMenu = null): Menu
@@ -76,8 +76,8 @@ class Menu extends CliMenuBuilder
     /**
      * Adds multiple options.
      *
-     * @param array $options
-     * @param CliMenuBuilder|null $subMenu
+     * @param  array  $options
+     * @param  CliMenuBuilder|null  $subMenu
      * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addOptions(array $options, ?CliMenuBuilder $subMenu = null): Menu
