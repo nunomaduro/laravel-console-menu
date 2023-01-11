@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nunomaduro/laravel-console-menu/actions/workflows/static.yml"><img src="https://img.shields.io/github/actions/workflow/status/nunomaduro/laravel-console-menu/static.yml?branch=main&style=flat-square&label=static%20analysis" alt="Static Analysis"></img></a>
+  <a href="https://github.com/nunomaduro/laravel-console-menu/actions/workflows/static.yml"><img src="https://img.shields.io/github/actions/workflow/status/nunomaduro/laravel-console-menu/static.yml?branch=master&style=flat-square&label=static%20analysis" alt="Static Analysis"></img></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-console-menu"><img src="https://poser.pugx.org/nunomaduro/laravel-console-menu/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-console-menu"><img src="https://poser.pugx.org/nunomaduro/laravel-console-menu/license.svg" alt="License"></a>
 </p>
