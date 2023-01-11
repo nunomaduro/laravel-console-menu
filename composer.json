@@ -34,5 +34,8 @@
                 "NunoMaduro\\LaravelConsoleMenu\\LaravelConsoleMenuServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.4"
     }
 }
