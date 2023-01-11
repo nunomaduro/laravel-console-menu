@@ -14,7 +14,7 @@ Laravel Console Menu was created by, and is maintained by [Nuno Maduro](https://
 
 ## Installation
 
-> **Requires [PHP 7.2.5+](https://php.net/releases/)**
+> **Requires [PHP 8.1+](https://php.net/releases)**
 
 Require Laravel Console Menu using [Composer](https://getcomposer.org):
 
