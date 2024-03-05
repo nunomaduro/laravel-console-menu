@@ -32,7 +32,6 @@ class MenuOption extends SelectableItem
      *
      * @param  int|string  $value
      * @param  string  $text
-     * @param  callable  $callback
      * @param  bool  $showItemExtra
      * @param  bool  $disabled
      */
