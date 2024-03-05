@@ -32,7 +32,6 @@ class Menu extends CliMenuBuilder
      * Menu constructor.
      *
      * @param  string  $title
-     * @param  array  $options
      */
     public function __construct($title = '', array $options = [])
     {
@@ -52,8 +51,6 @@ class Menu extends CliMenuBuilder
      * Adds a new option.
      *
      * @param  mixed  $value
-     * @param  string  $label
-     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addOption($value, string $label): Menu
     {
@@ -73,9 +70,6 @@ class Menu extends CliMenuBuilder
 
     /**
      * Adds multiple options.
-     *
-     * @param  array  $options
-     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addOptions(array $options): Menu
     {
@@ -88,10 +82,6 @@ class Menu extends CliMenuBuilder
 
     /**
      * Add a question.
-     *
-     * @param  string  $label
-     * @param  string  $placeholder
-     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function addQuestion(string $label, string $placeholder = ''): Menu
     {
@@ -128,7 +118,6 @@ class Menu extends CliMenuBuilder
      * Set the result.
      *
      * @param  mixed  $result
-     * @return \NunoMaduro\LaravelConsoleMenu\Menu
      */
     public function setResult($result): Menu
     {
