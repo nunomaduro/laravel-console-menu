@@ -148,7 +148,7 @@ Check out the full documentation [here](https://github.com/php-school/cli-menu/b
 
 Thank you for considering to contribute to Laravel Console Menu. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
 
-You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro)
+You can have a look at the [GitHub Releases](https://github.com/nunomaduro/laravel-console-menu/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro)
 
 ## Support the development
 **Do you like this project? Support it by donating**
